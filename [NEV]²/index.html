@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[NEV]² - Criamos tecnologia que eleva negócios ao próximo nível. Desenvolvimento de software, sites e aplicativos.">
+    <meta name="keywords" content="desenvolvimento de software, criação de sites, aplicativos mobile, tecnologia, inovação">
+    <title>[NEV]² - Tecnologia de Alto Nível</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">[</span>NEV<span class="logo-bracket">]</span><sup>2</sup>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+                <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="software.html" data-i18n="nav.software">Softwares</a></li>
+                <li><a href="plans.html" data-i18n="nav.plans">Planos</a></li>
+                <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
+                <li><a href="testimonials.html" data-i18n="nav.testimonials">Avaliações</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+                    <span class="lang-current">PT</span>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-up">
+                <span class="badge-dot"></span>
+                <span data-i18n="hero.badge">Inovação em Tecnologia</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                <span data-i18n="hero.title1">Criamos tecnologia que</span>
+                <span class="gradient-text" data-i18n="hero.title2">eleva negócios</span>
+                <span data-i18n="hero.title3">ao próximo nível.</span>
+            </h1>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-i18n="hero.description">
+                Desenvolvemos soluções digitais sob medida que transformam ideias em produtos de alto impacto. Software, sites e aplicativos com a qualidade que sua empresa merece.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="projects.html" class="btn btn-primary">
+                    <span data-i18n="hero.cta1">Ver Projetos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <span data-i18n="hero.cta2">Falar com a Equipe</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label" data-i18n="hero.stat1">Projetos Entregues</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label" data-i18n="hero.stat2">Satisfação</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" data-i18n="hero.stat3">Suporte</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services-preview" id="services-preview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label" data-i18n="services.label">O que fazemos</span>
+                <h2 class="section-title" data-i18n="services.title">Soluções completas para sua transformação digital</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.item1.title">Desenvolvimento de Software</h3>
+                    <p data-i18n="services.item1.desc">Sistemas robustos e escaláveis, desenvolvidos com as melhores tecnologias do mercado.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.item2.title">Criação de Sites</h3>
+                    <p data-i18n="services.item2.desc">Sites modernos, responsivos e otimizados para conversão e experiência do usuário.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.item3.title">Aplicativos Mobile</h3>
+                    <p data-i18n="services.item3.desc">Apps nativos e híbridos para iOS e Android com performance excepcional.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.item4.title">Soluções Personalizadas</h3>
+                    <p data-i18n="services.item4.desc">Automações, integrações e sistemas sob medida para suas necessidades específicas.</p>
+                </div>
+            </div>
+            <div class="services-cta" data-aos="fade-up">
+                <a href="services.html" class="btn btn-outline" data-i18n="services.cta">Ver todos os serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content" data-aos="fade-right">
+                    <span class="section-label" data-i18n="why.label">Por que a [NEV]²</span>
+                    <h2 class="section-title" data-i18n="why.title">Excelência técnica aliada a visão de negócio</h2>
+                    <p class="why-us-description" data-i18n="why.description">
+                        Combinamos expertise técnica de ponta com uma compreensão profunda das necessidades do seu negócio. Cada linha de código é escrita pensando no impacto que vai gerar.
+                    </p>
+                    <ul class="features-list">
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-i18n="why.feature1">Código limpo e documentado</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="150">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-i18n="why.feature2">Arquitetura escalável</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-i18n="why.feature3">Performance otimizada</span>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="250">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span data-i18n="why.feature4">Segurança em primeiro lugar</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="why-us-visual" data-aos="fade-left">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="file-name">nev-solution.ts</span>
+                        </div>
+                        <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">NevSolution</span> {
+  <span class="keyword">private</span> quality = <span class="string">"premium"</span>;
+  <span class="keyword">private</span> innovation = <span class="number">100</span>;
+
+  <span class="keyword">async</span> <span class="function">createProject</span>(idea: Idea) {
+    <span class="keyword">const</span> solution = <span class="keyword">await</span> <span class="this">this</span>.analyze(idea);
+    <span class="keyword">return</span> <span class="this">this</span>.deliver(solution);
+  }
+
+  <span class="function">deliver</span>(project: Project) {
+    <span class="keyword">return</span> {
+      ...project,
+      quality: <span class="this">this</span>.quality,
+      onTime: <span class="boolean">true</span>,
+      scalable: <span class="boolean">true</span>
+    };
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 data-i18n="cta.title">Pronto para transformar sua ideia em realidade?</h2>
+                <p data-i18n="cta.description">Entre em contato e descubra como podemos ajudar seu negócio a alcançar o próximo nível.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">
+                    <span data-i18n="cta.button">Iniciar Conversa</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-bracket">[</span>NEV<span class="logo-bracket">]</span><sup>2</sup>
+                    </a>
+                    <p data-i18n="footer.description">Transformando ideias em soluções digitais de alto impacto.</p>
+                  
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.navigation">Navegação</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.company">Empresa</h4>
+                    <ul>
+                        <li><a href="software.html" data-i18n="nav.software">Softwares</a></li>
+                        <li><a href="plans.html" data-i18n="nav.plans">Planos</a></li>
+                        <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contact">Contato</h4>
+                    <p>caselasthiago@gmail.com</p>
+                    <p>+55 (61) 9 9888-9542</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 [NEV]². <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
