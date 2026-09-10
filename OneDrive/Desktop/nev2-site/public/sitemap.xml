@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nev2dev.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://nev2dev.com/servicos</loc><priority>0.9</priority></url>
+  <url><loc>https://nev2dev.com/projetos</loc><priority>0.9</priority></url>
+  <url><loc>https://nev2dev.com/projetos/plataforma-aurea</loc><priority>0.7</priority></url>
+  <url><loc>https://nev2dev.com/projetos/studio-cronos</loc><priority>0.7</priority></url>
+  <url><loc>https://nev2dev.com/projetos/vortice-cloud</loc><priority>0.7</priority></url>
+  <url><loc>https://nev2dev.com/projetos/norte-ia</loc><priority>0.7</priority></url>
+  <url><loc>https://nev2dev.com/sobre</loc><priority>0.7</priority></url>
+  <url><loc>https://nev2dev.com/equipe</loc><priority>0.6</priority></url>
+  <url><loc>https://nev2dev.com/faq</loc><priority>0.6</priority></url>
+  <url><loc>https://nev2dev.com/contato</loc><priority>0.8</priority></url>
+</urlset>

@@ -1,0 +1,133 @@
+.services-page__title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 0.8rem 0 1.2rem;
+  max-width: 16ch;
+}
+
+.services-page__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--nev-hairline);
+  border: 1px solid var(--nev-hairline);
+}
+
+.services-page__card {
+  background: var(--nev-surface);
+  padding: clamp(1.6rem, 2vw, 2.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: background 0.3s var(--ease-premium);
+}
+
+.services-page__card:hover {
+  background: var(--nev-bg-alt);
+}
+
+.services-page__card h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--nev-text);
+  letter-spacing: -0.01em;
+}
+
+.services-page__card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--nev-text-dim);
+}
+
+.services-page__card ul {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.services-page__card li {
+  font-size: 0.86rem;
+  color: var(--nev-text-dim);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.services-page__card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--nev-green);
+}
+
+.services-page__card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--nev-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.services-page__card-footer span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--nev-text);
+}
+
+.services-page__card-footer a {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--nev-green);
+  white-space: nowrap;
+}
+
+.services-page__cta {
+  background: var(--nev-forest);
+  text-align: center;
+}
+
+.services-page__cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.services-page__cta-inner h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--nev-mint);
+  margin: 0;
+}
+
+.services-page__cta-inner p {
+  color: rgba(204, 249, 206, 0.72);
+  margin: 0;
+}
+
+@media (max-width: 980px) {
+  .services-page__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .services-page__grid {
+    grid-template-columns: 1fr;
+  }
+}

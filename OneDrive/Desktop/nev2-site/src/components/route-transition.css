@@ -1,0 +1,61 @@
+.route-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  pointer-events: none;
+  background: linear-gradient(135deg, var(--nev-forest) 0%, var(--nev-green-deep) 55%, #06150d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(0);
+}
+
+.route-overlay__mark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: var(--nev-mint);
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.route-overlay--cover {
+  transform-origin: bottom;
+  animation: overlay-cover 0.38s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.route-overlay--cover .route-overlay__mark {
+  animation: overlay-mark-in 0.3s ease-out 0.16s forwards;
+}
+
+.route-overlay--reveal {
+  transform: scaleY(1);
+  transform-origin: top;
+  animation: overlay-reveal 0.42s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.route-overlay--reveal .route-overlay__mark {
+  opacity: 1;
+  animation: overlay-mark-out 0.22s ease-in forwards;
+}
+
+@keyframes overlay-cover {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+@keyframes overlay-reveal {
+  from { transform: scaleY(1); }
+  to { transform: scaleY(0); }
+}
+
+@keyframes overlay-mark-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes overlay-mark-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

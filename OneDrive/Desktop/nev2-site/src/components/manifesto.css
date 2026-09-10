@@ -1,0 +1,27 @@
+.manifesto {
+  background: var(--nev-bg);
+}
+
+.manifesto__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 980px;
+}
+
+.manifesto__statement {
+  font-size: clamp(1.8rem, 3.6vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.manifesto__statement em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--nev-green);
+}
+
+.manifesto__lede {
+  margin-left: auto;
+  text-align: left;
+}
