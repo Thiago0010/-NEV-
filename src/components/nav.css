@@ -1,0 +1,134 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 22px 0;
+  transition: background 0.4s var(--ease-premium), padding 0.4s var(--ease-premium),
+    border-color 0.4s var(--ease-premium);
+  border-bottom: 1px solid transparent;
+  /* Home header: subtle white glow and blur to make it pop against any background */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav--scrolled {
+  padding: 14px 0;
+  background: rgba(105, 199, 129, 0.72);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--nev-line);
+}
+
+.nav--inner {
+  padding: 14px 0;
+  background: rgba(251, 253, 250, 0.8); /* Light semi-transparent bg for inner pages */
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--nev-hairline);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__mark {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  color: var(--nev-text);
+}
+
+.nav--scrolled .nav__mark,
+.nav--inner .nav__mark {
+  color: var(--nev-text);
+}
+
+/* Special case for Home (non-scrolled) — making it pop with bright white and deep shadow */
+.nav:not(.nav--scrolled):not(.nav--inner) .nav__mark {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav__logo {
+  height: 80px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.92rem;
+  color: #065503 !important;
+ }
+
+.nav--scrolled .nav__links,
+.nav--inner .nav__links {
+  color: var(--nev-text-dim);
+}
+
+.nav:not(.nav--scrolled):not(.nav--inner) .nav__links {
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav__links a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s var(--ease-premium);
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--nev-green);
+  transition: width 0.3s var(--ease-premium);
+}
+
+.nav__links a:hover::after,
+.nav__links a:focus-visible::after {
+  width: 100%;
+}
+
+.nav__cta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  background: var(--nev-green);
+  color: #fff;
+  border: 1px solid var(--nev-green);
+  border-radius: 999px;
+  transition: background 0.3s var(--ease-premium), color 0.3s var(--ease-premium),
+    border-color 0.3s var(--ease-premium), transform 0.2s var(--ease-premium);
+  white-space: nowrap;
+}
+
+.nav__cta:hover {
+  background: #0a6b35;
+  color: #fff;
+  border-color: #0a6b35;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .nav__links {
+    display: none;
+  }
+}

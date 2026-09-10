@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nev2dev.com/sitemap.xml

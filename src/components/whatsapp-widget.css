@@ -1,0 +1,135 @@
+.wa-widget {
+  position: fixed;
+  right: clamp(16px, 3vw, 28px);
+  bottom: clamp(16px, 3vw, 28px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+
+.wa-widget__fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #25d366;
+  color: #06210f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 36px -12px rgba(6, 33, 15, 0.55);
+  transition: transform 0.3s var(--ease-premium), box-shadow 0.3s var(--ease-premium);
+}
+
+.wa-widget__fab:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 20px 44px -12px rgba(6, 33, 15, 0.6);
+}
+
+.wa-widget__panel {
+  width: min(320px, 86vw);
+  background: var(--nev-surface);
+  border: 1px solid var(--nev-hairline);
+  border-radius: 18px;
+  box-shadow: 0 30px 70px -30px rgba(12, 26, 18, 0.35);
+  overflow: hidden;
+  animation: wa-in 0.25s var(--ease-premium) both;
+}
+
+@keyframes wa-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.wa-widget__panel-header {
+  background: #0d1f14;
+  color: var(--nev-mint);
+  padding: 1rem 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.wa-widget__panel-header strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+}
+
+.wa-widget__panel-header span {
+  display: block;
+  font-size: 0.78rem;
+  color: rgba(204, 249, 206, 0.65);
+  margin-top: 0.2rem;
+}
+
+.wa-widget__close {
+  background: none;
+  border: none;
+  color: var(--nev-mint);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.wa-widget__form {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.wa-widget__form label {
+  font-size: 0.78rem;
+  color: var(--nev-text-dim);
+  margin-top: 0.3rem;
+}
+
+.wa-widget__form input,
+.wa-widget__form select {
+  background: var(--nev-bg);
+  border: 1px solid var(--nev-hairline);
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--nev-text);
+}
+
+.wa-widget__form input:focus,
+.wa-widget__form select:focus {
+  outline: none;
+  border-color: #25d366;
+}
+
+.wa-widget__submit {
+  margin-top: 0.6rem;
+  background: #25d366;
+  color: #06210f;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: transform 0.25s var(--ease-premium);
+}
+
+.wa-widget__submit:hover {
+  transform: translateY(-1px);
+}
+
+.wa-widget__note {
+  font-size: 0.72rem;
+  color: var(--nev-text-dim);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .wa-widget {
+    right: 12px;
+    bottom: 12px;
+  }
+}

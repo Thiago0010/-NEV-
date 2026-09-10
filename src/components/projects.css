@@ -1,0 +1,172 @@
+.carousel {
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+.carousel__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.carousel__title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0;
+}
+
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.carousel__all {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--nev-text-dim);
+  white-space: nowrap;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease-premium), color 0.3s var(--ease-premium);
+}
+
+.carousel__all:hover {
+  color: var(--nev-green);
+  border-color: var(--nev-green);
+}
+
+.carousel__arrows {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.carousel__arrows button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--nev-hairline);
+  background: var(--nev-surface);
+  color: var(--nev-text);
+  font-size: 1.3rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s var(--ease-premium), border-color 0.25s var(--ease-premium),
+    transform 0.25s var(--ease-premium), opacity 0.25s var(--ease-premium);
+}
+
+.carousel__arrows button:hover:not(:disabled) {
+  background: var(--nev-bg-alt);
+  border-color: var(--nev-green);
+  transform: translateY(-1px);
+}
+
+.carousel__arrows button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Trilho horizontal com scroll-snap — comportamento estilo Apple:
+   sem barra de rolagem visível, momentum nativo, um cartão "encaixa"
+   por vez. */
+.carousel__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+  margin-top: 10rem !important;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__spacer {
+  flex: 0 0 max(0px, calc((100vw - var(--container)) / 2 - 1.5rem));
+}
+
+@media (max-width: 860px) {
+  .carousel__spacer {
+    flex-basis: 4vw;
+  }
+}
+
+.case-card {
+  flex: 0 0 min(360px, 82vw);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  background: var(--nev-surface);
+  border: 1px solid var(--nev-hairline);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -34px rgba(12, 26, 18, 0.16);
+  transition: transform 0.45s var(--ease-premium), box-shadow 0.45s var(--ease-premium);
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px -30px rgba(12, 26, 18, 0.22);
+}
+
+.case-card__media {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-premium);
+}
+
+.case-card:hover .case-card__media {
+  transform: scale(1.04);
+}
+
+.case-card__body {
+  padding: 1.6rem 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.case-card__category {
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: var(--nev-text-dim);
+  text-transform: uppercase;
+}
+
+.case-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0.2rem 0 0.2rem;
+  color: var(--nev-text);
+  letter-spacing: -0.01em;
+}
+
+.case-card__summary {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--nev-text-dim);
+}
+
+.case-card__link {
+  margin-top: 0.8rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--nev-green);
+}
+
+@media (max-width: 620px) {
+  .carousel__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

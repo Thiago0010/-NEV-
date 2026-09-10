@@ -1,0 +1,51 @@
+.process__title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 3rem;
+  max-width: 16ch;
+}
+
+.process__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.process__step {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--nev-hairline);
+  transition: background 0.3s var(--ease-premium);
+}
+
+.process__step:last-child {
+  border-bottom: 1px solid var(--nev-hairline);
+}
+
+.process__step:hover {
+  background: var(--nev-bg-alt);
+}
+
+.process__number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: var(--nev-text-dim);
+  line-height: 1;
+}
+
+.process__step h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0 0 0.4rem;
+  color: var(--nev-text);
+}
+
+.process__step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--nev-text-dim);
+  max-width: 50ch;
+}

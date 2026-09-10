@@ -1,0 +1,92 @@
+.plans-page__header {
+  text-align: center !important;
+  margin-bottom: 4rem !important;
+  width: 100% !important;
+}
+
+.plans-page__header .eyebrow {
+  text-align: center !important;
+  display: block !important;
+}
+
+.plans-page__title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 1rem auto !important;
+  text-align: center !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.plans-page__header .section-lede {
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 46ch;
+}
+
+.plans-page {
+  background: var(--nev-bg);
+}
+
+.plans-page__contact {
+  border-top: 1px solid var(--nev-hairline);
+  padding-block: clamp(60px, 8vw, 100px);
+}
+
+.plans-page__contact-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.plans-page__contact-text {
+  max-width: 40ch;
+}
+
+.plans-page__contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none;
+  transition: color 0.3s var(--ease-premium);
+}
+
+.contact-link:hover {
+  color: var(--nev-green);
+}
+
+.contact-link__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nev-text-dim);
+  font-weight: 600;
+}
+
+.contact-link__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--nev-text);
+}
+
+@media (max-width: 768px) {
+  .plans-page__contact-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .plans-page__contact-links {
+    align-items: flex-start;
+  }
+  .contact-link {
+    align-items: flex-start;
+  }
+}
