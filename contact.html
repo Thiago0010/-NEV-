@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a [NEV]² - Estamos prontos para ajudar seu negócio.">
+    <title>Contato - [NEV]²</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-bracket">[</span>NEV<span class="logo-bracket">]</span><sup>2</sup>
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+                <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="software.html" data-i18n="nav.software">Softwares</a></li>
+                <li><a href="plans.html" data-i18n="nav.plans">Planos</a></li>
+                <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
+                <li><a href="testimonials.html" data-i18n="nav.testimonials">Avaliações</a></li>
+                <li><a href="contact.html" class="active" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+                    <span class="lang-current">PT</span>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-i18n="contactPage.header.title">Entre em Contato</h1>
+            <p data-i18n="contactPage.header.desc">Estamos prontos para ajudar seu negócio a alcançar o próximo nível.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2 data-i18n="contactPage.info.title">Vamos conversar?</h2>
+                    <p data-i18n="contactPage.info.desc">Preencha o formulário ao lado ou utilize um dos nossos canais de contato. Responderemos o mais rápido possível.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-i18n="contactPage.email">E-mail</h4>
+                                <p>caselasthiago@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-i18n="contactPage.phone">Telefone</h4>
+                                <p>+55 (61) 9 9888-9542</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-item-text">
+                                <h4 data-i18n="contactPage.location">Localização</h4>
+                                <p>DF, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <div class="form-success" id="form-success" data-i18n="contactPage.form.success">
+                        Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    </div>
+                    <div class="form-error" id="form-error" data-i18n="contactPage.form.error">
+                        Erro ao enviar mensagem. Por favor, tente novamente.
+                    </div>
+                    
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contactPage.form.name">Nome completo</label>
+                            <input type="text" id="name" name="name" required data-i18n-placeholder="contactPage.form.namePlaceholder" placeholder="Seu nome">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" data-i18n="contactPage.form.email">E-mail</label>
+                            <input type="email" id="email" name="email" required data-i18n-placeholder="contactPage.form.emailPlaceholder" placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company" data-i18n="contactPage.form.company">Empresa (opcional)</label>
+                            <input type="text" id="company" name="company" data-i18n-placeholder="contactPage.form.companyPlaceholder" placeholder="Nome da sua empresa">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-i18n="contactPage.form.message">Mensagem</label>
+                            <textarea id="message" name="message" required data-i18n-placeholder="contactPage.form.messagePlaceholder" placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contactPage.form.submit">Enviar mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-bracket">[</span>NEV<span class="logo-bracket">]</span><sup>2</sup>
+                    </a>
+                    <p data-i18n="footer.description">Transformando ideias em soluções digitais de alto impacto.</p>
+                  
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.navigation">Navegação</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Serviços</a></li>
+                        <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.company">Empresa</h4>
+                    <ul>
+                        <li><a href="software.html" data-i18n="nav.software">Softwares</a></li>
+                        <li><a href="plans.html" data-i18n="nav.plans">Planos</a></li>
+                        <li><a href="team.html" data-i18n="nav.team">Equipe</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contact">Contato</h4>
+                    <p>caselasthiago@gmail.com</p>
+                    <p>+55 (61) 9 9888-9542</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 [NEV]². <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/particles.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // O número de telefone de destino (incluindo o código do país e DDD, sem sinais como + ou -)
+const WHATSAPP_NUMBER = '5561998889542'; // Exemplo: 55 (Brasil) 61 (DDD) 998889542 (Número)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // 1. Captura os valores dos campos
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value || 'Não informada'; // Trata campo opcional
+            const message = document.getElementById('message').value;
+
+            // 2. Monta a mensagem formatada
+            let whatsappMessage = `*Nova Proposta Técnica | [NEV]²*\n\n`;
+            whatsappMessage += `Olá, meu nome é ${name} e gostaria de discutir um projeto.\n`;
+            whatsappMessage += `*Empresa:* ${company}\n`;
+            whatsappMessage += `*E-mail de Contato:* ${email}\n\n`;
+            whatsappMessage += `*Mensagem/Desafio:*\n${message}`;
+
+            // 3. Codifica a mensagem para URL e remove quebras de linha que o WhatsApp não gosta
+            const encodedMessage = encodeURIComponent(whatsappMessage).replace(/%0A/g, '%0A');
+
+            // 4. Cria o link do WhatsApp
+            const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            // 5. Abre o link (em nova aba para não perder a página atual)
+            window.open(whatsappURL, '_blank');
+            
+            // Opcional: Feedback ao usuário (você pode usar um elemento de status se desejar)
+            // alert('Redirecionando para o WhatsApp...');
+            
+            // Opcional: Limpa o formulário após o envio
+            form.reset();
+        });
+    }
+});
+    </script>
+</body>
+</html>
